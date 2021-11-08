@@ -1,4 +1,4 @@
-#include "fpr.h"
+#include "fpr.hpp"
 
 FPR::FPR() {
 
@@ -8,15 +8,15 @@ FPR::~FPR() {
 
 }
 
-float FPR::Z(float n) {
+Z::Z(float n) {
   return 0;
 }
 
-float FPR::S(float n) {
+S::S(float n) {
   return n++;
 }
 
-float FPR::P(std::vector<float> n, int i) {
+float P::P(std::vector<float> n, int i) {
   return n[i - 1];
 }
 

@@ -16,6 +16,6 @@ class POW : public FPR {
   std::vector<long int> recurrence(std::vector<long int> n) {
     MULT mult;
     P p;
-    return mult({p(1, n), p(2, n)});
+    return mult({p(3, n), p(1, n)});
   }
 };

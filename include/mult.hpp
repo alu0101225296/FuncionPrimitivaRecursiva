@@ -14,6 +14,6 @@ class MULT : public FPR {
   std::vector<long int> recurrence(std::vector<long int> n) {
     ADD add;
     P p;
-    return add({p(1, n), p(2, n)});
+    return add({p(3, n), p(1, n)});
   }
 };

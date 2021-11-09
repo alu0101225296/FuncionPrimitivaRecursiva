@@ -13,6 +13,6 @@ class ADD : public FPR {
   std::vector<long int> recurrence(std::vector<long int> n) {
     S s;
     P p;
-    return s * p(1, n);
+    return s * p(3, n);
   }
 };

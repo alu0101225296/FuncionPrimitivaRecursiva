@@ -31,8 +31,8 @@ void FPR::exec(std::vector<long int> n) {
       tempA[tempA.size() - 1] = y - 1;
       std::vector<long int> tempB;
       exec(tempA);
-      tempB.push_back(result[0]);
       tempB.insert(tempB.end(), tempA.begin(), tempA.end());
+      tempB.push_back(result[0]);
       result = recurrence(tempB);
       return;
     }

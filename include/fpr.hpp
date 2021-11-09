@@ -28,12 +28,12 @@ void FPR::exec(std::vector<int> n) {
       return;
     } else {
       std::vector<int> tempA = n;
-			tempA[tempA.size() - 1] = y - 1;
-			std::vector<int> tempB;
+      tempA[tempA.size() - 1] = y - 1;
+      std::vector<int> tempB;
       exec(tempA);
-			tempB.push_back(result[0]);
+      tempB.push_back(result[0]);
       tempB.insert(tempB.end(), tempA.begin(), tempA.end());
-			result = recurrence(tempB);
+      result = recurrence(tempB);
       return;
     }
   }

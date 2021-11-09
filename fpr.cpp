@@ -16,15 +16,6 @@ class FPR {
     val = n;
   }
 
-  std::vector<int> Val() {  // arreglar
-    return val;
-  }
-
-  int Val2() {   // arreglar
-    if(val.size() > 1) std::cout << "mal";
-    return val[0];
-  }
-
   virtual void exec() { 
     std::cout << "xd";
   }
@@ -36,10 +27,18 @@ class FPR {
   }   
 
   FPR operator *(FPR op) {
-    setV(op.Val());
+    setV(op);
     exec();
     return *this;
     // return *this(op.Val());
+  } 
+
+  operator std::vector<int>() {
+    return val;
+  }
+
+  operator int() {
+    return val[0];
   }
 
   friend std::ostream& operator << (std::ostream& out, const FPR& fpr);
@@ -99,13 +98,13 @@ class SUMA : public FPR {
     assert(val.size() == 2);
     P p;
     if(val[1] == 0) 
-      val = p(1,val).Val();
+      val = p(1,val);
     else {
       SUMA suma;
       S s;
       S s1;
       //suma({val[0], val[1]}).Val2();
-      val = (s * p(2,val)).Val();
+      val = (s * p(2,val));
       // val = (s * p(3, {val[0], val[1], s1({val[0], val[1]}).Val2()})).Val();
     }
   }

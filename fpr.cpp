@@ -6,12 +6,8 @@ class FPR {
  protected:
   std::vector<int> val;
  public:
-  FPR() {
-
-  }
-  ~FPR() {
-
-  }
+  FPR() {}
+  ~FPR() {}
   void setV(std::vector<int> n) {
     val = n;
   }
@@ -93,7 +89,7 @@ class P : public FPR { // sirve
 
 class SUMA : public FPR {
   public:
-  using FPR::FPR;
+  using FPR::FPR;  // innecesario?
   void exec() {
     assert(val.size() == 2);
     P p;
@@ -102,9 +98,8 @@ class SUMA : public FPR {
     else {
       SUMA suma;
       S s;
-      S s1;
-      //suma({val[0], val[1]}).Val2();
-      val = (s * p(2,val));
+      val = (s * p(3, {val[0], val[1], suma({val[0], val[1]})}));
+      // val = (s * p(2,val));
       // val = (s * p(3, {val[0], val[1], s1({val[0], val[1]}).Val2()})).Val();
     }
   }
@@ -114,8 +109,4 @@ class SUMA : public FPR {
 int main() {
   SUMA s;
   std::cout << s({2, 4});
-
 }
-
-
-// CAMBIAR Val POR operator std::vector<int>

@@ -5,12 +5,12 @@
 
 class ADD : public FPR {
   public:
-  std::vector<int> base(std::vector<int> n) {
+  std::vector<long int  > base(std::vector<long int  > n) {
     P p;
     return p(1,n); 
   }
 
-  std::vector<int> recurrence(std::vector<int> n) {
+  std::vector<long int  > recurrence(std::vector<long int  > n) {
     S s;
     P p;
     return s * p(1, n);

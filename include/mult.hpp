@@ -6,12 +6,12 @@
 
 class MULT : public FPR {
   public:
-  std::vector<int> base(std::vector<int> n) {
+  std::vector<long int  > base(std::vector<long int  > n) {
     Z z;
     return z(n); 
   }
 
-  std::vector<int> recurrence(std::vector<int> n) {
+  std::vector<long int  > recurrence(std::vector<long int  > n) {
     ADD add;
     P p;
     return add({p(1, n), p(2, n)});

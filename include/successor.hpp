@@ -3,8 +3,8 @@
 
 class S : public FPR { 
   public:
-  void exec(std::vector<int> n) {
-    result.resize(0);  // no me fio
+  void exec(std::vector<long int  > n) {
+    result.resize(0);
     result.push_back(arg[0] + 1);
   }
 };
